@@ -1,6 +1,10 @@
-package main
+package testDemo
 
-import "testing"
+import (
+	"fmt"
+	"os"
+	"testing"
+)
 
 func TestAdd(t *testing.T) {
 	if ans := Add(1, 2); ans != 4 {
@@ -16,3 +20,9 @@ func TestAdd(t *testing.T) {
 //func TestMain(m *testing.M) {
 //	m.Run()
 //}
+
+func TestMain(m *testing.M) {
+	code := m.Run()
+	fmt.Printf("TestMain code %d\n", code)
+	os.Exit(code)
+}
