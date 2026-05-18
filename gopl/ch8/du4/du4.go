@@ -1,5 +1,10 @@
 package main
 
+import (
+	"fmt"
+	"os"
+)
+
 var done = make(chan struct{})
 
 // 轮询退出状态
@@ -13,5 +18,18 @@ func cancelled() bool {
 	default:
 		// 如果done通道未关闭：select会立即执行default分支
 		return false
+	}
+}
+
+func main() {
+	// determine the initial directories
+	roots := os.Args[1:]
+	if len(roots) == 0 {
+		fmt.Println("can not scan the root dir, return")
+		return
+	}
+
+	go func(){
+		os.Stdin.Read()
 	}
 }
