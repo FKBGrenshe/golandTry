@@ -1,0 +1,19 @@
+global:
+    namespace: Development
+    env_name: test
+    container_name: container_name
+
+server:
+
+client:
+  timeout: 10000
+  namespace: Development
+  service: # The service provided by the business service can have multiple.
+    - name: trpc.example.test.redis # 服务名
+      target: redis://:123456@127.0.0.1:6379/0
+
+  log:
+    default:
+      - writer: console
+        level: debug
+
