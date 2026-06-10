@@ -5,13 +5,13 @@ go 1.25.0
 require (
 	git.code.oa.com/trpc-go/trpc-go v0.23.0
 	git.woa.com/trpc-go/trpc-database/goredis/v3 v3.3.9
-	github.com/go-sql-driver/mysql v1.8.1
+	github.com/go-sql-driver/mysql v1.10.0
 	github.com/lib/pq v1.12.3
 	golang.org/x/net v0.54.0
 )
 
 require (
-	filippo.io/edwards25519 v1.1.0 // indirect
+	filippo.io/edwards25519 v1.2.0 // indirect
 	git.code.oa.com/trpc-go/trpc-metrics-runtime v0.5.20 // indirect
 	git.code.oa.com/trpc-go/trpc-utils v0.2.2 // indirect
 	git.woa.com/jce/jce v1.2.0 // indirect
